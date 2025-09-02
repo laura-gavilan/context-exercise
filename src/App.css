@@ -1,42 +1,88 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  min-height: 100vh;
   padding: 2rem;
-  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.container.light {
+  background-color: #f0f0f0;
+  color: #222;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.container.dark {
+  background-color: #121212;
+  color: #eee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.toggle-button {
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: none;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  color: inherit;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 1.5rem;
 }
+
+.toggle-button:hover {
+  background-color: white;
+  color: var(--btn-hover-text, #1409097a);
+}
+
 
 .card {
-  padding: 2em;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+
+.card.light {
+  background-color: #ffffff;
+  color: #222;
+}
+
+
+.card.dark {
+  background-color: #2b2b2b;
+  color: #eee;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid currentColor;
+  font-style: italic;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.footer.light {
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+
+.footer.dark {
+  background-color: #1a1a1a;
+  color: #eee;
 }
